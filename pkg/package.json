@@ -1,0 +1,12 @@
+{
+  "name": "wasm-prover",
+  "version": "0.1.0",
+  "files": [
+    "wasm_prover_bg.wasm",
+    "wasm_prover.js",
+    "wasm_prover.d.ts"
+  ],
+  "module": "wasm_prover.js",
+  "types": "wasm_prover.d.ts",
+  "sideEffects": false
+}
