@@ -1,17 +1,17 @@
 /* tslint:disable */
 /* eslint-disable */
 /**
-* @param {string} name
+* @param {BigInt} n
+* @returns {BigInt}
 */
-export function greet(name: string): void;
+export function fibonacci(n: BigInt): BigInt;
 
 export type InitInput = RequestInfo | URL | Response | BufferSource | WebAssembly.Module;
 
 export interface InitOutput {
   readonly memory: WebAssembly.Memory;
-  readonly greet: (a: number, b: number) => void;
-  readonly __wbindgen_malloc: (a: number) => number;
-  readonly __wbindgen_realloc: (a: number, b: number, c: number) => number;
+  readonly fibonacci: (a: number, b: number, c: number) => void;
+  readonly __wbindgen_add_to_stack_pointer: (a: number) => number;
 }
 
 /**
