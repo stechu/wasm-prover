@@ -10,7 +10,12 @@ zkSNARK Prover in WASM
     ```
 
 ## Run the benchmark
-```bash
-./serve.sh
-```
-You can view the result at `localhost:8080`.
+* WASM time:
+    ```bash
+    ./serve.sh
+    ```
+    You can view the result at `localhost:8080`.
+* Native time:
+    ```bash
+    cargo bench
+    ```
