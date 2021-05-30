@@ -1,19 +1,16 @@
 zkSNARK Prover in WASM
 =======================
 
-1. Install dependency:
-```bash
-cargo install wasm-pack
-```
+## Dependencies:
+* [Rust toolchain](https://www.rust-lang.org/tools/install)
+* [npm](https://www.npmjs.com/get-npm)
+* `wasm-pack` package:
+    ```bash
+    cargo install wasm-pack
+    ```
 
-2. Build Package:
+## Run the benchmark
 ```bash
-wasm-pack build --target web
+./serve.sh
 ```
-
-3. Serve the website locally:
-```bash
-python3 -m http.server
-```
-
-WASM setting is derived from [Mozilla Doc](https://developer.mozilla.org/en-US/docs/WebAssembly/Rust_to_wasm#install_node.js_and_npm).
+You can view the result at `localhost:8080`.
