@@ -1,4 +1,4 @@
-import { fibonacci } from "wasm-prover";
+import { fibonacci, zk_prove } from "wasm-prover";
 
 const pre = document.getElementById("wasm-prover");
 
@@ -9,13 +9,13 @@ const median = arr => {
     return arr.length % 2 !== 0 ? nums[mid] : (nums[mid - 1] + nums[mid]) / 2;
   };
 
-const repeat = 100;
+const repeat = 1;
 const input = 27;
 const perf = Array.from(
     {length: repeat},
     (_, i) => {
         const t0 = performance.now();
-        fibonacci(BigInt(input));
+        zk_prove();
         const t1 = performance.now();
         return t1 - t0;
     }
