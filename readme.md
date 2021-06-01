@@ -1,5 +1,7 @@
-zkSNARK Prover in WASM
-=======================
+Benchmark WASM Prover Perf
+===========================
+
+We implement a simple zkSNARK instance, pedersen commitment, to benchmark the wasm and native execution time.
 
 ## Dependencies:
 * [Rust toolchain](https://www.rust-lang.org/tools/install)
