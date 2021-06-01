@@ -14,4 +14,11 @@ mod tests{
             crate::fibonacci(n);
         }); 
     }
+
+    #[bench]
+    fn bench_prover(b: &mut Bencher) {
+        b.iter(|| {
+            crate::zk_prove();
+        });
+    }
 }

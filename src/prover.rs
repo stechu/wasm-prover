@@ -32,12 +32,11 @@ pub fn prover() {
 
     // TODO: remove this and use pre-computed zk_param
     let zk_param =
-        <Groth16<Bls12_381> as SNARK<Fq>>::ProvingKey::deserialize_uncompressed(ZK_PARAM.data)
+        <Groth16<Bls12_381> as SNARK<Fq>>::ProvingKey::deserialize_unchecked(ZK_PARAM.data)
             .unwrap();
     //let zk_param = groth_param_gen(pedersen_param);
 
     // This is the part that we want to benchmark:
-    groth_proof_gen(&zk_param, circuit, &[0u8; 32]);
+    groth_proof_gen(&zk_param, circuit.clone(), &[0u8; 32]);
 
 }
-

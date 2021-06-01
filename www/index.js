@@ -9,7 +9,7 @@ const median = arr => {
     return arr.length % 2 !== 0 ? nums[mid] : (nums[mid - 1] + nums[mid]) / 2;
   };
 
-const repeat = 1;
+const repeat = 5;
 const input = 27;
 const perf = Array.from(
     {length: repeat},
@@ -20,4 +20,4 @@ const perf = Array.from(
         return t1 - t0;
     }
 );
-pre.textContent = `median time of running fib(${input}): ${median(perf)} ms`;
+pre.textContent = `median time of running zk_prove(): ${median(perf)} ms`;
