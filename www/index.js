@@ -1,4 +1,4 @@
-import { fibonacci, zk_prove } from "wasm-prover";
+import { fibonacci, pedersen_prove, blake_prove } from "wasm-prover";
 
 const pre = document.getElementById("wasm-prover");
 
@@ -15,7 +15,7 @@ const perf = Array.from(
     {length: repeat},
     (_, i) => {
         const t0 = performance.now();
-        zk_prove();
+        pedersen_prove();
         const t1 = performance.now();
         return t1 - t0;
     }

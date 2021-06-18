@@ -7,6 +7,8 @@ pub mod r1cs;
 pub mod prover;
 pub mod zk_params;
 pub mod pedersen_params;
+pub mod blake_params;
+pub mod blake;
 
 use wasm_bindgen::prelude::*;
 
@@ -25,6 +27,11 @@ pub fn fibonacci(n: u64) -> u64 {
 }
 
 #[wasm_bindgen]
-pub fn zk_prove() {
-    prover::prover();
+pub fn pedersen_prove() {
+    prover::pedersen_prover();
+}
+
+#[wasm_bindgen]
+pub fn blake_prove() {
+    prover::blake_prover();
 }

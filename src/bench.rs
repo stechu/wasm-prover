@@ -18,7 +18,7 @@ mod tests{
     #[bench]
     fn bench_prover(b: &mut Bencher) {
         b.iter(|| {
-            crate::zk_prove();
+            crate::pedersen_prove();
         });
     }
 }
